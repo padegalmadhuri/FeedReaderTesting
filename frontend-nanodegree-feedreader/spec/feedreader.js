@@ -18,19 +18,20 @@
         });
 
         it('have URLs', function() {
-            for(i = 0; i < allFeeds.length; i++) {
-                expect(allFeeds[i].url).toBeDefined();
-                expect(allFeeds[i].url.length).not.toBe(0);
+         allFeeds.forEach(function(feed){
+              expect(feed.url).toBeDefined();
+              expect(feed.url.length).not.toBe(0);
             }
         });
+  
 
         /*test that loops through each feed
          * in the allFeeds object and ensures it has a name defined
          * and that the name is not empty.*/
          it('have names', function() {
-            for(i = 0; i < allFeeds.length; i++) {
-                expect(allFeeds[i].name).toBeDefined();
-                expect(allFeeds[i].name.length).not.toBe(0);
+            allFeeds.forEach(function(feed){
+                expect(feed.name).toBeDefined();
+                expect(feed.name.length).not.toBe(0);
             }
         });
     });
@@ -70,7 +71,7 @@
          
         beforeEach(function(callback) {
             loadFeed(0);
-            prevTopPost = $('.entry').eq(0).html();
+            prevTopPost = $('.feed.entry').eq(0).html();
 
             loadFeed(1, callback);
         });
