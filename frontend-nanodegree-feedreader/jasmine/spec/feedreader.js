@@ -96,7 +96,7 @@ $(function() {
 
             // Check the newsfeed  html to be not same as previous.
             it('has been loaded', function(){
-                expect($('.feed').html()).not.toEqual(testfeed);
+                expect($('.feed.entry').html()).not.toEqual(testfeed);
             });
         });
 }());
