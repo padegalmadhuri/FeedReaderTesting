@@ -89,7 +89,7 @@ $(function() {
 
             beforeEach(function(done) {
                 loadFeed(0, function() {
-                    testfeed = $('.feed.entry').html();
+                    testfeed = $('.feed').html();
                     loadFeed(1, done);
                 });
             });
